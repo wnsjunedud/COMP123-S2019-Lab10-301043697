@@ -8,6 +8,10 @@ namespace COMP123_S2019_Lab10_301043697
 {
     static class Program
     {
+        public static StartForm startform;
+        public static MainForm mainform;
+        public static EndForm endform;
+
         /// <summary>
         /// 해당 응용 프로그램의 주 진입점입니다.
         /// </summary>
@@ -16,7 +20,13 @@ namespace COMP123_S2019_Lab10_301043697
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            startform = new StartForm();
+            mainform = new MainForm();
+            endform = new EndForm();
+
+            Application.Run(new StartForm());
+
         }
     }
 }
